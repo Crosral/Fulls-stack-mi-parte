@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand fw-bold" href="index.html">FerreMarket</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="mostrarVista('productos')">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="inicio sesion.html">Iniciar Sesion</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="mostrarVista('carrito')">🛒 Ver Carrito</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+                    <button class="btn btn-outline-success" type="submit">Buscar</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <div id="toast-notificacion" class="toast-oculto">
+            <span id="toast-icono">🛒</span>
+            <span id="toast-mensaje">Producto agregado al carrito</span>
+        </div> 
+
+        <h2>Catálogo de productos</h2>
+        
+        <section id="vista-productos" class="contenedor-productos">
+            <article class="producto">
+                <img src="img/Concertina_Alambre_Puas.webp" alt="Alambre de púas" class="producto-imagen">
+                <div class="producto-info">
+                    <p class="categoria-producto">utiles</p>
+                    <h3>Alambre de púas</h3>
+                    <p class="precio">$1.500</p>
+                    <button class="boton-carrito">Agregar al carrito</button>
+                </div>
+            </article>
+
+            <article class="producto">
+                <img src="img/Mortero_Impermeabilizante.webp" alt="Mortero" class="producto-imagen">
+                <div class="producto-info">
+                    <p class="categoria-producto">utiles</p>
+                    <h3>Cemento de calidad</h3>
+                    <p class="precio">$12.750</p>
+                    <button class="boton-carrito">Agregar al carrito</button>
+                </div>
+            </article>
+
+            <article class="producto">
+                <img src="img/Panel_Pvc.webp" alt="Panel" class="producto-imagen">
+                <div class="producto-info">
+                    <p class="categoria-producto">Materiales</p>
+                    <h3>Panel Pvc</h3>
+                    <p class="precio">$1.500</p>
+                    <button class="boton-carrito">Agregar al carrito</button>
+                </div>
+            </article>
+
+            <article class="producto">
+                <img src="img/Taladro.webp" alt="Taladro" class="producto-imagen">
+                <div class="producto-info">
+                    <p class="categoria-producto">Herramienta</p>
+                    <h3>Taladro</h3>
+                    <p class="precio">$15.500</p>
+                    <button class="boton-carrito">Agregar al carrito</button>
+                </div>
+            </article>
+
+            <article class="producto">
+                <img src="img/Set Herramientas.webp" alt="Taladro" class="producto-imagen">
+                <div class="producto-info">
+                    <p class="categoria-producto">Herramienta</p>
+                    <h3>Set herramientas</h3>
+                    <p class="precio">$16.500</p>
+                    <button class="boton-carrito">Agregar al carrito</button>
+                </div>
+            </article>
+        </section>
+
+        <!-- Seccion Carrito de Compras -->
+        <section id="vista-carrito" class="carrito" style="display: none;">
+            <h2>🛒 Tu Carrito de Compras</h2>
+            <div id="lista-carrito"></div>
+            <div id="resumen-carrito"></div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
